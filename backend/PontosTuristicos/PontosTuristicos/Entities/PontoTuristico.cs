@@ -4,13 +4,13 @@ namespace PontosTuristicos.Entities;
 
 public class PontoTuristico : Entity
 {
-    public string Nome { get; set; }
-    public string Descricao { get; set; }
-    public string Localizacao { get; set; }
-    public string Cidade { get; set; }
-    public string Estado { get; set; }
+    public string Nome { get; set; } = string.Empty;
+    public string Descricao { get; set; } = string.Empty;
+    public string Localizacao { get; set; } = string.Empty;
+    public string Cidade { get; set; } = string.Empty;
+    public string Estado { get; set; } = string.Empty;
 
-
+    protected PontoTuristico() { }
     public PontoTuristico(string nome, string descricao, string localizacao, string cidade, string estado)
     {
         Nome = nome;

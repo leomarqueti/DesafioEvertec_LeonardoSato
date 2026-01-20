@@ -2,12 +2,7 @@
 
 public abstract class Entity
 {
-    Guid Id { get; set; }
-    DateTime DataInclusao { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public DateTime DataInclusao { get; set; } = DateTime.Now;
 
-    public Entity()
-    {
-        Id = Guid.NewGuid();
-        DataInclusao = DateTime.Now;
-    }
 }

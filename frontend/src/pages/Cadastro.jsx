@@ -53,6 +53,7 @@ function Cadastro() {
           onChange={(e) => setNome(e.target.value)}
         />
         <textarea
+          maxLength={100}
           value={descricao}
           onChange={(e) => setDescricao(e.target.value)}
         />

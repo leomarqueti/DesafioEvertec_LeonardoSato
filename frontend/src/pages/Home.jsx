@@ -40,38 +40,72 @@ function Home() {
 
   return (
     <div>
-      <h1>Pontos turisticos</h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "10px",
+          margin: "6px"
+        }}
+      >
+        <h1>Pontos turisticos</h1>
 
-      <Link to="/cadastro">+ Cadastrar novo ponto</Link>
+        <Link className="linkNav" to="/cadastro">
+          + Cadastrar novo ponto
+        </Link>
 
-      <div>
-        <input
-          placeholder="Buscar por nome, cidade..."
-          value={termo}
-          onChange={(e) => setTermo(e.target.value)}
-        />
-        <button onClick={buscarDados}>Pesquisar</button>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <input
+            placeholder="Buscar por nome, cidade..."
+            value={termo}
+            onChange={(e) => setTermo(e.target.value)}
+            style={{ border: "none", padding: "5px", borderRadius: "5px" }}
+          />
+          <button className="btn" Click={buscarDados}>
+            Pesquisar
+          </button>
+        </div>
       </div>
 
-      <div>
+      <hr />
+      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         {pontos.map((ponto) => (
-          <div key={ponto.id}>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            key={ponto.id}
+          >
             <h3>{ponto.nome}</h3>
             <p>{ponto.localizacao}</p>
+            <Link className="verDetalhes" to={`/detalhes/${ponto.id}`}>
+              Ver detalhes
+            </Link>
             <hr />
-            <Link to={`/detalhes/${ponto.id}`}>Ver detalhes</Link>
           </div>
         ))}
       </div>
 
-      <div>
-        <button onClick={() => setPagina(pagina - 1)} disabled={pagina === 1}>
+      <div
+        style={{
+          marginTop: "10px",
+          display: "flex",
+          gap: "10px",
+          justifyContent: "center",
+        }}
+      >
+        <button
+          className="btn"
+          onClick={() => setPagina(pagina - 1)}
+          disabled={pagina === 1}
+        >
           ⬅️ Anterior
         </button>
 
         <span>Pagina: {pagina}</span>
 
-        <button onClick={() => setPagina(pagina + 1)}>Próximo ➡️</button>
+        <button className="btn" onClick={() => setPagina(pagina + 1)}>
+          Próximo ➡️
+        </button>
       </div>
     </div>
   );

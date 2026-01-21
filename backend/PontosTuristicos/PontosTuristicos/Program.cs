@@ -11,6 +11,16 @@ builder.Services.AddControllers();
 
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 var nomeDoProjeto = app.Configuration.GetValue<string>("NomeDoProjeto");
@@ -26,6 +36,7 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
     options.RoutePrefix = "swagger";
 });
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 

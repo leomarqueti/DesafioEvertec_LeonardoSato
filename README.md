@@ -2,6 +2,7 @@
 
 Aplicação Full Stack desenvolvida como parte do processo seletivo para a vaga de Desenvolvedor de Software. O sistema oferece uma solução completa para gerenciamento de pontos turísticos.
 
+<img width="1754" height="815" alt="image" src="https://github.com/user-attachments/assets/f0c4f315-729c-4cec-8ed0-edfdfec19e79" />
 ---
 
 ## 🚀 Tecnologias e Arquitetura
@@ -67,11 +68,8 @@ Para evitar erros de execução, certifique-se de que seu ambiente atende aos re
 - [x] Paginação (Controle Anterior/Próximo).
 - [x] Validação (Descrição máx. 100 caracteres).
 - [x] Dropdown de Estados (UF).
-
-
-
 ---
 
 **Desenvolvedor:** Leonardo Sato
 
-<img width="1754" height="815" alt="image" src="https://github.com/user-attachments/assets/f0c4f315-729c-4cec-8ed0-edfdfec19e79" />
+

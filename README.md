@@ -5,7 +5,7 @@ Aplicação Full Stack desenvolvida como parte do processo seletivo para a vaga 
 <img width="1754" height="815" alt="image" src="https://github.com/user-attachments/assets/f0c4f315-729c-4cec-8ed0-edfdfec19e79" />
 ---
 
-## 🚀 Tecnologias e Arquitetura
+## Tecnologias e Arquitetura
 
 O projeto foi construído seguindo padrões de mercado, com separação clara entre API e Interface.
 
@@ -15,7 +15,7 @@ O projeto foi construído seguindo padrões de mercado, com separação clara en
 
 ---
 
-## ⚙️ Pré-requisitos de Ambiente
+##  Pré-requisitos de Ambiente
 
 Para evitar erros de execução, certifique-se de que seu ambiente atende aos requisitos abaixo:
 
@@ -25,7 +25,7 @@ Para evitar erros de execução, certifique-se de que seu ambiente atende aos re
 
 ---
 
-## 🛠️ Guia de Execução
+##  Guia de Execução
 
 ### 1. Backend (API)
 

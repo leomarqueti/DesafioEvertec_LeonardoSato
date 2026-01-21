@@ -34,7 +34,7 @@ export default function Detalhes() {
 
   return (
     <div>
-      <div>
+      <div style={{ display: "flex", flexDirection: "column", gap: "25px" }}>
         <h1>{ponto.nome}</h1>
         <p>
           {ponto.localizacao} - {ponto.cidade}/{ponto.estado}
@@ -48,8 +48,10 @@ export default function Detalhes() {
         <p>
           Cadastrado em: {new Date(ponto.dataInclusao).toLocaleDateString()}
         </p>
+        <Link style={{ textAlign: "center" }} className="verDetalhes" to="/">
+          Voltar
+        </Link>
       </div>
-      <Link to="/">Voltar</Link>
     </div>
   );
 }

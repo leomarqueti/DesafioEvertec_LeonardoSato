@@ -35,7 +35,7 @@ function Cadastro() {
   };
 
   return (
-    <div>
+    <div className="container-cadastro">
       <h1>Cadastro</h1>
 
       <div
@@ -43,33 +43,41 @@ function Cadastro() {
           display: "flex",
           flexDirection: "column",
           gap: "10px",
-          width: "20%",
+          width: "50vh",
         }}
       >
         <input
+          className="campoTexto"
           placeholder="Nome"
           type="text"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
         />
         <textarea
+          className="campoTexto"
           maxLength={100}
           value={descricao}
           onChange={(e) => setDescricao(e.target.value)}
         />
         <input
+          className="campoTexto"
           placeholder="Localização"
           type="text"
           value={localizacao}
           onChange={(e) => setLocalizacao(e.target.value)}
         />
         <input
+          className="campoTexto"
           placeholder="Cidade"
           type="text"
           value={cidade}
           onChange={(e) => setCidade(e.target.value)}
         />
-        <select value={estado} onChange={(e) => e.target.value}>
+        <select
+          className="campoTexto"
+          value={estado}
+          onChange={(e) => setEstado(e.target.value)}
+        >
           <option value="AC">Acre</option>
           <option value="AL">Alagoas</option>
           <option value="AP">Amapá</option>
@@ -98,8 +106,15 @@ function Cadastro() {
           <option value="SE">Sergipe</option>
           <option value="TO">Tocantins</option>
         </select>
-
-        <button onClick={cadastrarPonto}>Cadastrar</button>
+      </div>
+      <div>
+        <button
+          style={{ width: "80px" }}
+          className="btn"
+          onClick={cadastrarPonto}
+        >
+          Cadastrar
+        </button>
       </div>
     </div>
   );

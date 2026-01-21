@@ -46,7 +46,7 @@ function Home() {
           flexDirection: "column",
           alignItems: "center",
           gap: "10px",
-          margin: "6px"
+          margin: "6px",
         }}
       >
         <h1>Pontos turisticos</h1>
@@ -60,7 +60,7 @@ function Home() {
             placeholder="Buscar por nome, cidade..."
             value={termo}
             onChange={(e) => setTermo(e.target.value)}
-            style={{ border: "none", padding: "5px", borderRadius: "5px" }}
+            className="campoTexto"
           />
           <button className="btn" Click={buscarDados}>
             Pesquisar

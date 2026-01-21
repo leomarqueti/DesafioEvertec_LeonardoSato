@@ -35,6 +35,12 @@ a {
   color: inherit;
 }
 
+.campoTexto {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .btn {
   border: none;
   padding: 5px;
@@ -58,7 +64,14 @@ a {
   color: #ffffff;
 }
 
+.container-cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 footer {
-    margin: 20px;
-    text-align: center;
+  margin: 20px;
+  text-align: center;
 }

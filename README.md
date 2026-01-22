@@ -15,7 +15,7 @@ O projeto foi construído seguindo padrões de mercado, com separação clara en
 
 ---
 
-##  Pré-requisitos de Ambiente
+## ⚙️ Pré-requisitos de Ambiente
 
 Para evitar erros de execução, certifique-se de que seu ambiente atende aos requisitos abaixo:
 
@@ -25,26 +25,33 @@ Para evitar erros de execução, certifique-se de que seu ambiente atende aos re
 
 ---
 
-##  Guia de Execução
+## 🛠️ Guia de Execução
 
 ### 1. Backend (API)
 
-1.  Acesse a pasta `backend`.
-2.  Gere o banco de dados a partir das Migrations (Code First):
+1.  Acesse o diretório do projeto (onde está o arquivo `.csproj`):
+    *(Nota: Devido à estrutura da solução, é necessário acessar a subpasta interna)*
     ```bash
+    cd backend/PontosTuristicos/PontosTuristicos
+    ```
+2.  Restaure as dependências e gere o banco de dados:
+    ```bash
+    dotnet restore
     dotnet tool install --global dotnet-ef
     dotnet ef database update
     ```
-    *(Nota: A connection string padrão aponta para o `(localdb)\mssqllocaldb`)*.
-3.  Inicie a aplicação:
+3.  Inicie a aplicação forçando a porta HTTPS correta (7218):
     ```bash
-    dotnet run
+    dotnet run --urls="https://localhost:7218"
     ```
-    ✅ A API ficará disponível em: `https://localhost:7218`
+    ✅ **Confirme se o terminal exibe:** `Now listening on: https://localhost:7218`
 
 ### 2. Frontend (Interface)
 
-1.  Acesse a pasta `frontend`.
+1.  Abra um **novo terminal** e acesse a pasta do frontend:
+    ```bash
+    cd frontend
+    ```
 2.  Instale as dependências:
     ```bash
     npm install
@@ -56,6 +63,7 @@ Para evitar erros de execução, certifique-se de que seu ambiente atende aos re
 4.  O navegador abrirá automaticamente no endereço local (ex: `http://localhost:5173`).
 
 ---
+
 
 ## ✅ Checklist de Entregas (Conforme PDF)
 

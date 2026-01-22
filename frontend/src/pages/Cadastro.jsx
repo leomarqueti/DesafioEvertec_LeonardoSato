@@ -29,7 +29,6 @@ function Cadastro() {
       alert("Ponto turistico cadastrado com sucesso!!");
       navigate("/");
     } catch (erro) {
-      console.log("Erro no cadastro:", erro);
       alert("Ocorreu um erro ao cadastrar!");
     }
   };

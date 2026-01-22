@@ -19,7 +19,6 @@ export default function Detalhes() {
       setPonto(resposta.data);
       setLoading(false);
     } catch (erro) {
-      console.log("Erro ao buscar id", erro);
       alert(`Erro ao buscar o id: ${id}`);
     }
   };

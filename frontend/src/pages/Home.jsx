@@ -28,7 +28,6 @@ function Home() {
       setPontos(resposta.data);
       setLoading(false);
     } catch (erro) {
-      console.log("Erro api", erro);
       alert("ERRO API");
       setLoading(false);
     }

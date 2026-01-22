@@ -27,6 +27,12 @@ Para evitar erros de execução, certifique-se de que seu ambiente atende aos re
 
 ## 🛠️ Guia de Execução
 
+Começe com:
+```bash
+git clone https://github.com/leomarqueti/DesafioEvertec_LeonardoSato.git
+cd DesafioEvertec_LeonardoSato
+```
+
 ### 1. Backend (API)
 
 1.  Acesse o diretório do projeto (onde está o arquivo `.csproj`):

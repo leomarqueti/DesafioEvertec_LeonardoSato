@@ -46,6 +46,8 @@ cd DesafioEvertec_LeonardoSato
     dotnet tool install --global dotnet-ef
     dotnet ef database update
     ```
+   "Nota: A connection string padrão aponta para o (localdb)\mssqllocaldb. Se você utiliza o SQL Express ou outra instância, altere o arquivo appsettings.json."
+    
 3.  Inicie a aplicação forçando a porta HTTPS correta (7218):
     ```bash
     dotnet run --urls="https://localhost:7218"

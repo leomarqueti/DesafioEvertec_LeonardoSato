@@ -61,7 +61,7 @@ function Home() {
             onChange={(e) => setTermo(e.target.value)}
             className="campoTexto"
           />
-          <button className="btn" Click={buscarDados}>
+          <button className="btn" onClick={buscarDados}>
             Pesquisar
           </button>
         </div>

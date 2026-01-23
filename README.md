@@ -70,8 +70,36 @@ cd DesafioEvertec_LeonardoSato
     ```
 4.  O navegador abrirá automaticamente no endereço local (ex: `http://localhost:5173`).
 
+
 ---
 
+
+## ❓ Resolução de Problemas Comuns 
+
+Caso encontre dificuldades ao rodar o projeto em um ambiente limpo, verifique os pontos abaixo:
+
+### 1. Erro de Certificado SSL ("Sua conexão não é particular")
+Como o ambiente de desenvolvimento utiliza um certificado auto-assinado, o navegador pode bloquear o acesso à API (`https://localhost:7218`).
+* **Solução Rápida:** No navegador, clique em **"Avançado"** > **"Ir para localhost (não seguro)"**.
+* **Solução Definitiva:** Execute o comando abaixo no terminal para confiar no certificado de desenvolvimento .NET:
+    ```bash
+    dotnet dev-certs https --trust
+    ```
+
+### 2. Erro de Conexão com Banco de Dados (Error 26, 50 ou 52)
+O projeto está configurado para usar o **SQL Server LocalDB** (`(localdb)\mssqllocaldb`), que é padrão no Visual Studio.
+* **Se você não tem o LocalDB:** Instale o [SQL Server LocalDB].
+* **Se você usa SQL Express ou Docker:** Altere a ConnectionString no arquivo `backend/PontosTuristicos/PontosTuristicos/appsettings.json`:
+    ```json
+    "DefaultConnection": "Server=.\\SQLEXPRESS;Database=DesafioEvertecDB;Trusted_Connection=True;TrustServerCertificate=True;"
+    ```
+
+### 3. Erro ao rodar Migrations ("dotnet-ef not found")
+Se o comando `dotnet ef` não for reconhecido:
+1.  Certifique-se de ter rodado: `dotnet tool install --global dotnet-ef`
+2.  **Importante:** Feche e reabra o terminal para carregar as novas variáveis de ambiente.
+
+--- 
 
 ## ✅ Checklist de Entregas (Conforme PDF)
 
